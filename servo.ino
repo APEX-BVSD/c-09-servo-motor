@@ -16,15 +16,12 @@ void setup() {
 }
 
 void loop() {
-    // TODO: Explain this code block
     myServo.write(0);
     delay(1000);
 
-    // TODO: Explain this code block
     myServo.write(90);
     delay(1000);
 
-    // TODO: Explain this code block
     myServo.write(90);
     delay(1000);
 }
