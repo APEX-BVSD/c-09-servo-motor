@@ -23,11 +23,11 @@ Use the wiring diagram below as a guide.
 
 ![Servo wiring guide](servo_wiring.png)
 
-# 3. Move the servo to a specific angle
+## 3. Move the servo to a specific angle
 1. Examine the code in `servo.ino`. 
 2. Send it to the Arduino and observe what it does.
 
-## Reflect
+### Reflect
 1. What does `servo.attach(servoPin);` do?
     > your answer
 
@@ -41,7 +41,7 @@ Use the wiring diagram below as a guide.
     > your answer
 
 
-# 4. Create a movement function
+## 4. Create a movement function
 1. Add the following code underneath `loop()` to create a movement function. This will eliminate repeating the `delay()` calls.
 
 ```c++
@@ -57,7 +57,7 @@ void moveServo(int angle) {
 ```
 2. **Refactor** your `loop()` so it uses calls to `moveServo()`. You should only have three lines of code, but **the servo behavior should stay the same**.
 
-# 5. Sweep the servo
+## 5. Sweep the servo
 The previous program can be bit jumpy. Replace your `loop()` function with this code to use a for loop to move from the beginning to end angle more gradually.
 
 ```c++
@@ -83,7 +83,7 @@ void loop() {
 }
 
 ```
-## For loops
+### For loops
 A `for` loop repeats a block of code a specific number of times. In C/C++ (and many other languages), it has three parts:
 1. Initialization: Sets the starting value of a counter variable.
 2. Ending Condition: Determines whether the loop should continue.
@@ -102,7 +102,7 @@ For example, this loop gradually moves the servo from 0° to 180°:
 - `servo.write(angle)` moves the servo toward the current angle.
 - `delay(15)` pauses for 15 milliseconds between updates.
 
-## Reflect
+### Reflect
 1. Why does the servo move more smoothly than in Part 3?
     > your answer
 
@@ -138,7 +138,7 @@ The functon should
 - Use speed to control the delay between movements.
 - Use a loop instead of writing every angle.
 
-## Test the function
+### Test the function
 Test your function with the following calls.
 ```c++
 sweepServo(0, 90, 20);
