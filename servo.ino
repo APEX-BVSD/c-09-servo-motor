@@ -8,20 +8,20 @@
 
 const int servoPin = 3;
 
-Servo myServo; // create the servo object
+Servo servo; // create the servo object
 
 void setup() {
-    myServo.attach(servoPin); // enable the servo on the pin
+    servo.attach(servoPin); // enable the servo on the pin
 
 }
 
 void loop() {
-    myServo.write(0);
+    servo.write(0);
     delay(1000);
 
-    myServo.write(90);
+    servo.write(90);
     delay(1000);
 
-    myServo.write(90);
+    servo.write(180);
     delay(1000);
 }
