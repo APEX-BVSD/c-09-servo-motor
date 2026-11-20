@@ -17,13 +17,13 @@ A servo motor most often has three wires. Connect your servo using the table bel
 | Red        | 5V (+)      |
 | Orange     | Digital Pin 3 |
 
-**Important:** Never force your servo to rotate manually.  You can damage the little gear-dos on the inside.
+**Important:** Make sure to disconnect the power before wiring. Never force your servo to rotate manually.  You can damage the little gear-dos on the inside.
 
 Use the wiring diagram below as a guide.
 
 ![Servo wiring guide](servo_wiring.png)
 
-# 3. Move the server to a specific angle
+# 3. Move the servo to a specific angle
 1. Examine the code in `servo.ino`. 
 2. Send it to the Arduino and observe what it does.
 
@@ -74,7 +74,7 @@ void loop() {
     delay(500);
 
     // reverse
-    for (int angle = end; angle > start; angle--) {
+    for (int angle = end; angle >= start; angle--) {
         servo.write(angle);
         delay(15);
     }
@@ -115,7 +115,7 @@ For example, this loop gradually moves the servo from 0° to 180°:
 4. What happens if you change the end angle from 180 to 90?
     > your answer
 
-# 5. Create a function called `sweepServo()`
+## 6. Create a function called `sweepServo()`
 
 Create a function called `sweepServo()` that accepts three parameters. Make sure to complete the function documentation in the comment above it.
 
@@ -146,7 +146,7 @@ sweepServo(90, 180, 10);
 sweepServo(180, 0, 15);
 ```
 
-# 6. Wrap-up
+## 7. Wrap-up
 1. Why would you want to control the speed of a servo's movement?
     > your answer
 
